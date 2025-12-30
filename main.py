@@ -49,6 +49,8 @@ async def build_chat(user_name: str, question: str) -> lms.Chat:
 
 	if len(conversation_history) > CHAT_LIMIT:
 		conversation_history = conversation_history[-CHAT_LIMIT:]
+		if conversation_history and conversation_history[0]['role'] == 'bot':
+			conversation_history.pop(0)  # make sure we get even cuts :)
 
 	for msg in conversation_history:
 		if msg['role'] == 'user':
