@@ -44,6 +44,7 @@ async def on_ready():
 
 
 async def build_chat(user_name: str, question: str) -> lms.Chat:
+	global conversation_history  # not really good at bunch of async reads, but fine for example
 	chat = lms.Chat(INSTRUCTIONS)
 
 	if len(conversation_history) > CHAT_LIMIT:
