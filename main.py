@@ -15,6 +15,8 @@ SERVER_PORT   = os.getenv('SERVER_PORT')
 SERVER_API    = f'localhost:{SERVER_PORT}'
 MODEL         = os.getenv('MODEL')
 CHAT_LIMIT    = int(os.getenv('CHAT_LIMIT'))
+if CHAT_LIMIT % 2 != 0:
+	CHAT_LIMIT += 1  # can't work with odd numbers, so will give bot benefit of doubt
 
 # example item: {'role': 'user', text: '...'}
 conversation_history = []  # store all convo history, including bot's msgs
@@ -45,9 +47,7 @@ async def build_chat(user_name: str, question: str) -> lms.Chat:
 	chat = lms.Chat(INSTRUCTIONS)
 
 	if len(conversation_history) > CHAT_LIMIT:
-		# pop both user and bot's msg
-		conversation_history.pop(0)
-		conversation_history.pop(0)
+		conversation_history = conversation_history[-CHAT_LIMIT:]
 
 	for msg in conversation_history:
 		if msg['role'] == 'user':
