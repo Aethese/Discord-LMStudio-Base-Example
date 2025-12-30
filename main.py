@@ -73,7 +73,7 @@ async def on_message(msg: discord.Message):
 	async with msg.channel.typing():
 		async with lms.AsyncClient(SERVER_API) as client:
 			model = await client.llm.model(MODEL)
-			chat = await build_chat(msg.author.name, msg.content)
+			chat = await build_chat(msg.author.display_name, msg.content)
 			result = await model.respond(chat)
 			conversation_history.append({'role': 'bot', 'text': result.content})
 

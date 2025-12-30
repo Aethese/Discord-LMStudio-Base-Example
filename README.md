@@ -35,4 +35,4 @@ You will also need to know how to modify the model's settings and use a good pro
 When in doubt, you could always bother some online AI model lol
 
 #### Tested on
-Windows 11 24H2, LM Studio `0.3.36`, CUDA/CPU llama.cpp (Windows) `v1.66.0 stable`, py-cord `2.7.0`
+Windows 11 24H2, LM Studio `0.3.36`, CUDA/CPU llama.cpp (Windows) `v1.66.0 stable`, py-cord `2.7.0`, python `3.12.10`
