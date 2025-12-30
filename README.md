@@ -1,5 +1,5 @@
 # Discord LM Studio Base example
-Minimal Discord bot (utilizes [Pycord](https://pycord.dev/)) that watches a Discord channel, and responds accordingly to every message. It utilizes a server being ran by a local LM Studio instance to serve as the bot's brains
+Minimal Discord bot (utilizes [Pycord](https://pycord.dev/)) that watches a Discord channel, and responds accordingly to every message. It utilizes a server being ran by a local [LM Studio](https://lmstudio.ai/) instance to serve as the bot's brains
 
 #### Note
 I slightly stress tested it with multiple users talking to it at once, but can't guarantee stability. Seemed to work fine for me tho
