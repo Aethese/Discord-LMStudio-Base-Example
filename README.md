@@ -22,9 +22,9 @@ I was utilizing [EnlistedGhost/Ministral-3-14B-Instruct-2512-GGUF](https://huggi
 * Top P Sampling: `0.9`
 
 ## How To Use
-The sample code gives basically everything you need to get a simple chat bot up and running. The bot is programmed to watch a channel, and respond whenever it sees a message. There are some changes you will need to make to get it running
+The sample code gives basically everything you need to get a simple chat bot up and running. The bot is programmed to watch a channel, and respond whenever it sees a message. There are some changes you will need to make to get it running. You will also need LM Studio installed, and need a local server instance running under the Developer tab for the bot to connect to.
 
-## Modifying Variables
+### Modifying Variables
 If you look inside `.env.example`, you will see how you should set up your environment variables. I kept it simple and left everything you will need to modify in here (lazy to also include json lmao). You will just need to rename that file to just `.env`, and modify the variables that works for you.
 
 #### Knowing how to modify variables
